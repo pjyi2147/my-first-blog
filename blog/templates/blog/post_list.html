@@ -6,13 +6,20 @@
     <div>
       <h1>Test Page</h1>
     </div>
-
+{% for post in posts %}
     <div>
       <p>published: 2016.8.30, 10:38</p>
       <h2>My first Post</h2>
       <p>IT really works... oh my...</p>
     </div>
 
+
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
     
   </body>
 </html>
